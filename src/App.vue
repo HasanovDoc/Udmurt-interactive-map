@@ -1,6 +1,5 @@
 <template>
   <div>
-    <img alt="Vue logo" src="./assets/logo.png">
     <HomePage />
   </div>
 </template>
@@ -17,6 +16,6 @@ import HomePage from './components/HomePage.vue';
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 </style>

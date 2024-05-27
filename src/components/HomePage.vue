@@ -1,7 +1,4 @@
 <template>
-  <div class="hello">
-    
-  </div>
   <MapContainer/>
 </template>
 
