@@ -39,7 +39,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "api-key.ts", "api-key.ts"  ],
   "exclude": [
     "node_modules"
   ]
