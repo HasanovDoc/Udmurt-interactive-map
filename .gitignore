@@ -22,4 +22,4 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-api-key.json
+api-key.ts
