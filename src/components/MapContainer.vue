@@ -171,15 +171,11 @@ const districtDescription = ref('')
 // eslint-disable-next-line no-unused-vars
 const logMapClick: DomEventHandler = (object, event) => {
   if (object?.type === 'feature'){    
-    console.log(typeof(object?.entity?.properties?.description))
+    // console.log(typeof(object?.entity?.properties?.description))
     
-    districtName.value = object?.entity.properties?.name
-    districtDescription.value = object?.entity.properties?.description
+    districtName.value = `${object?.entity?.properties?.name}`
+    districtDescription.value = `${object?.entity.properties?.description}`
     isDialogInfo.value = true; 
-  }
-  else{
-    console.log(event);
-    
   }
 }
 
