@@ -46,9 +46,9 @@
             <h1>
               {{ districtName }}
             </h1>
-            <button @click="closeDialog">
-              {{ 'close' }}
-            </button> 
+            <div class="close-btn" @click="closeDialog">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </div> 
               <!-- <button @click="isDialogInfo = !isDialogInfo">Close</button> -->
           </div>
           <div class="events-block__content">
@@ -60,7 +60,6 @@
 
 <script setup lang="ts">
 import {  reactive, ref, shallowRef, } from 'vue';
-// eslint-disable-next-line no-unused-vars
 import type { YMap, YMapFeatureProps, BehaviorMapEventHandler, DomEvent, DomEventHandler } from '@yandex/ymaps3-types';
 import type { YMapLocationRequest, } from '@yandex/ymaps3-types/imperative/YMap';
 import {  YandexMap,
@@ -302,7 +301,7 @@ const closeDialog = ()=>{
 .events-block {
   position: absolute;
   transform: translate(-100%);
-  top: 0;
+  top: 1%;
   left: 0;
   /* display: none; */
   padding: 5px 8px;
@@ -312,6 +311,8 @@ const closeDialog = ()=>{
   background-color: rgba(56, 56, 219, 0.26);
   backdrop-filter: blur(10px);
   border-radius: 7px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   white-space: pre-line;
   text-align: left;
   transition: ease-in 0.5s;
@@ -324,11 +325,14 @@ const closeDialog = ()=>{
 }
 
 .events-block__header {
+  /* background-color: rgba(56, 56, 219, 0); */
   position: fixed;
   top: 0;
   display: flex;
   align-items: center;
+  /* gap: auto; */
   justify-content: space-between;
+  width: 93.5%;
   height: 6vh;
 }
 
@@ -345,6 +349,10 @@ const closeDialog = ()=>{
   
   margin: 0;
   padding: 0;
+}
+
+.close-btn {
+  cursor: pointer;
 }
 
 .events-block__content {
