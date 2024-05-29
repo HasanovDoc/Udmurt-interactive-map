@@ -90,7 +90,7 @@ const defaultSettings = {
       color: '#006efc',
       width: 2,
     }],
-    fill: 'rgba(56, 56, 219, 0.5)',
+    // fill: 'rgba(56, 56, 219, 0.5)',
   },
   name: ''
 } satisfies Omit<YMapFeatureProps, 'geometry'> & { geometry: Partial<YMapFeatureProps['geometry']>, name: string };
@@ -153,7 +153,8 @@ const features: FeatureProps[] = districts.map((district) => ({
   },
   style: {
     ...defaultSettings.style,
-    fill: 'rgba(6, 160, 209, 0.5)',
+    // fill: 'rgba(6, 160, 209, 0.5)',
+    fill: district.color,
   },
   properties:{
     hint: `<div>${district.name}</div>`,
